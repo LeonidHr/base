@@ -1,1 +1,48 @@
 // Заголовки, загальні БЕМ блоки та інше...
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $orangeColor rgba(256, 256, 256, 0.5);
+}
+
+/* Работает в Chrome, Edge и Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(256, 256, 256, 0.5);
+  border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $orangeColor;
+  border-radius: 8px;
+}
+
+
+//========================================================================================================================================================
+
+
+.button {
+  font-weight: 700;
+  @include adaptiveValue("font-size", 22, 18);
+  line-height: 118.181818%; /* 26/22 */
+  color: #161616;
+  border-radius: 10px;
+  padding: rem(11) rem(32);
+  transition: all 0.3s ease 0s;
+
+  // .button_w
+
+  &_w {
+    background-color: #fff;
+  
+    @media (any-hover: hover){
+      &:hover{
+        color: $orangeColor;
+      }
+    }
+  }
+} 

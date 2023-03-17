@@ -29,13 +29,13 @@
 
   &__title {
     font-weight: 700;
-    @include adaptiveValue("font-size", 85, 45);
+    @include adaptiveValue("font-size", 85, 45, 0, 1920, 480);
     line-height: 117.647059%; /* 100/85 */
     color: #FFFFFF;
     text-shadow: 0px 6px 17px rgba(22, 22, 22, 0.25);
     position: relative;
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 100, 50);
+      @include adaptiveValue("margin-bottom", 100, 50, 0, 1920, 1280);
     }
 
     &::after{
@@ -103,9 +103,19 @@
     transition: all 0.4s ease 0s;
     padding: 0 rem(11);
 
+    @media (max-width:$mobileSmall){
+      padding: 0 rem(7); 
+    }
+
     @media (any-hover: hover){
       &:hover{
         color: $orangeColor;
+      }
+    }
+
+    &._icon-key {
+      @media (max-width:$mobileSmall){
+        display: none; 
       }
     }
   }
@@ -133,6 +143,7 @@
   visibility: hidden;
   transition: all 0.4s ease 0s;
   overflow: auto;
+  
 
   ._input & {
     opacity: 1;
@@ -151,6 +162,13 @@
     display: flex;
     align-items: center;
     gap: rem(8);
+
+    &:not(:first-child) {
+      padding-top: rem(6);
+    }
+    &:not(:last-child) {
+      padding-bottom: rem(6);
+    }
 
     @media (any-hover: hover){
       &:hover{
@@ -179,27 +197,7 @@
 }
 
 
-.button {
-  font-weight: 700;
-  @include adaptiveValue("font-size", 22, 18);
-  line-height: 118.181818%; /* 26/22 */
-  color: #161616;
-  border-radius: 10px;
-  padding: rem(11) rem(32);
-  transition: all 0.3s ease 0s;
 
-  // .button_w
-
-  &_w {
-    background-color: #fff;
-  
-    @media (any-hover: hover){
-      &:hover{
-        color: $orangeColor;
-      }
-    }
-  }
-} 
 
 
 //====================================================================================================
