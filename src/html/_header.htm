@@ -1,4 +1,71 @@
 <header class="header">
-	<div class="header__container">
+	<div class="header__image-ibg">
+		<img data-src="@img/header/bg.jpg" alt="Фон">
+	</div>
+	<div class="header__container-big">
+		<a href="home.html" class="header__logo">
+			<img class="img-fluid" src="@img/logo.svg" alt="База знаний">
+		</a>
+		<div data-da=".menu__body,767" class="header__form">
+			<form id="search-form" class="form-mainscreen" action="#" method="POST">
+				<div class="form-mainscreen__actions">
+					<input id="search-input" autocomplete="off" type="text" name="search" data-error="Введите значение" placeholder="С чем помочь сегодня?" class="form-mainscreen__input">
+					<button class="form-mainscreen__btn _icon-key" type="button"></button>
+					<button class="form-mainscreen__btn _icon-search" type="submit"></button>
+				</div>
+				<div class="form-mainscreen__result result-search">
+					<a href="#" class="result-search__item">
+						<div class="result-search__icon _icon-link"></div>
+						<div class="result-search__text">Пример ввода текста...</div>
+					</a>
+					<a href="#" class="result-search__item">
+						<div class="result-search__icon _icon-link"></div>
+						<div class="result-search__text">Пример ввода текста...</div>
+					</a>
+					<a href="#" class="result-search__item">
+						<div class="result-search__icon _icon-link"></div>
+						<div class="result-search__text">Пример ввода текста...</div>
+					</a>
+					<a href="#" class="result-search__item">
+						<div class="result-search__icon _icon-link"></div>
+						<div class="result-search__text">Пример ввода текста...</div>
+					</a>
+					<a href="#" class="result-search__item">
+						<div class="result-search__icon _icon-link"></div>
+						<div class="result-search__text">Пример ввода текста...</div>
+					</a>
+					<a href="#" class="result-search__item">
+						<div class="result-search__icon _icon-link"></div>
+						<div class="result-search__text">Пример ввода текста...</div>
+					</a>
+					<a href="#" class="result-search__item">
+						<div class="result-search__icon _icon-link"></div>
+						<div class="result-search__text">Пример ввода текста...</div>
+					</a>
+				</div>
+			</form>
+		</div>
+		<div data-da=".menu__body,767" class="header__icons icons-header">
+			<a href="#" class="icons-header__icon">
+				<img class="img-fluid" src="@img/header/1.svg" alt="Иконка">
+			</a>
+			<a href="#" class="icons-header__icon">
+				<img class="img-fluid" src="@img/header/2.svg" alt="Иконка">
+			</a>
+			<a href="#" class="icons-header__icon">
+				<img class="img-fluid" src="@img/header/3.png" alt="Иконка">
+			</a>
+			<button type="button" class="icons-header__icon">
+				<img class="img-fluid" src="@img/header/4.svg" alt="Иконка">
+			</button>
+		</div>
+		<div class="header__menu menu">
+			<nav class="menu__body">
+				<div class="menu__image-ibg">
+					<img data-src="@img/header/bg.jpg" alt="Фон">
+				</div>
+			</nav>
+		</div>
+		<button type="button" class="menu__icon icon-menu"><span></span></button>
 	</div>
 </header>

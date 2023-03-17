@@ -59,4 +59,10 @@
     @include adaptiveValue("font-size", 22, 18);
     line-height: 118.181818%; /* 26/22 */
 	}
+
+  // .title_s28
+
+  &_s28 {
+    @include adaptiveValue("font-size", 28, 18);
+  }
 }

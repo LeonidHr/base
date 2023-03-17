@@ -1,14 +1,148 @@
 //====================================================================================================
 
+.header {
+
+	// .header__image-ibg
+
+	&__image-ibg {
+		position: absolute;
+		width: 100%;
+		@include adaptiveValue("height", 120, 70, 0, 1920, 992 );
+	}
+
+	// .header__container-big
+
+	&__container-big {
+		@include adaptiveValue("min-height", 120, 70, 0, 1920, 992);
+		position: relative;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 40, 15, 0, 1920, 1280);
+
+		@media (max-width:$mobile){
+			justify-content: space-between; 
+		}
+	}
+
+	// .header__form 
+
+	&__form {
+		flex: 1 1 auto;
+	}
+
+	// .header__logo
+
+	&__logo {
+		flex: 0 0 rem(150);
+		position: relative;
+		z-index: 5;
+	}
+
+	// .header__form
+
+	&__form {
+	}
+
+	// .header__icons
+
+	&__icons {
+		flex: 0 0 rem(165);
+	}
+
+	.form-mainscreen__input {
+		@include adaptiveValue("padding-top", 18, 12, 0, 1920, 992);
+		@include adaptiveValue("padding-bottom", 18, 12, 0, 1920, 992);
+	}
+}
+
+.form-mainscreen {
+
+	// .form-mainscreen__actions
+
+	&__actions {
+	}
+
+	// .form-mainscreen__input
+
+	&__input {
+	}
+
+	// .form-mainscreen__btn
+
+	&__btn {
+	}
+}
+
+.icons-header {
+	display: flex;
+	align-items: center;
+	gap: rem(15);
+
+	@media (max-width:$mobile){
+		align-self: center; 
+	}
+
+	// .icons-header__icon
+
+	&__icon {
+		background: rgba(22, 22, 22, 0.7);
+		border: 1.25793px solid #FFFFFF;
+		backdrop-filter: blur(1.57242px);
+		border-radius: 3.14483px;
+		flex: 0 0 rem(30);
+		height: rem(30);
+		display: flex;
+		align-items: center;
+		justify-content: center;	
+	}
+}
+
+.menu {
+
+	// .menu__body
+
+	&__body {
+		position: fixed;
+		left: -100%;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		padding: rem(90) rem(15) rem(30) rem(15);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		transition: all 0.4s ease 0s;
+
+		.menu-open & {
+			left: 0;
+		}
+	}
+
+	// .menu__image-ibg
+
+	&__image-ibg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: rem(170);
+	}
+}
+
+
+
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
+		flex: 0 0 rem(30);
 		width: rem(30);
 		height: rem(18);
 		z-index: 5;
@@ -24,7 +158,7 @@
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			background-color: #fff;
 		}
 		&::before {
 			top: 0;
@@ -53,4 +187,4 @@
 		}
 	}
 }
-*/
+
