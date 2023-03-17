@@ -34,6 +34,7 @@ $maxWidth: 1920;
 // Ширина обмежуючого контейнера (0 = немає обмеження)
 $maxWidthContainer: 955;
 $containerWidthBig: 1355;
+$containerWidthMiddle: 1040;
 // Загальний відступ у контейнера
 // (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
 $containerPadding: 30;
@@ -128,6 +129,20 @@ body {
 			}
 		}
 	}
+	[class*="__container-middle"] {
+		@if ($maxWidthContainer>0) {
+			max-width: rem($containerWidthMiddle);
+			margin: 0 auto;
+		}
+		@if ($containerPadding>0) {
+			@if ($maxWidthContainer>0) {
+				padding: 0 rem(math.div($containerPadding, 2));
+			} @else {
+				@include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
+				@include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
+			}
+		}
+	}
 } @else {
 	// Брейк-поїнтами
 	[class*="__container"] {
@@ -169,3 +184,4 @@ body {
 // Підключення стилів окремих сторінок
 @import "home";
 @import "./pages/catalog";
+@import "./pages/article";

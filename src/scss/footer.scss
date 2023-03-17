@@ -1,3 +1,41 @@
 //====================================================================================================
 
+.footer {
+
+  // .footer__container-middle
+
+  &__container-middle {
+  }
+
+  // .footer__icons
+
+  &__icons {
+    display: flex;
+    justify-content: end;
+    @include adaptiveValue("gap", 55, 35, 0, 992, 767);
+    @include adaptiveValue("padding-top", 80, 40);
+    @include adaptiveValue("padding-bottom", 80, 40);
+    border-top: 1px solid #ABABAB;
+    @media (max-width:$mobile){
+      justify-content: center; 
+    }
+  }
+
+  // .footer__link
+
+  &__link {
+    font-size: rem(34);
+    color: #B8B8B8;
+    transition: all 0.4s ease 0s;
+  
+    @media (any-hover: hover){
+      &:hover{
+        color: $orangeColor;
+      }
+    }
+  }
+}
+
+
+
 //====================================================================================================
