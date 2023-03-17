@@ -1155,6 +1155,14 @@ h6 {
     width: 100%;
   }
 
+  .mainscreen__image-ibg {
+    height: calc(100% + 180px);
+  }
+
+  .mainscreen__container {
+    min-height: calc(100vh - 180px);
+  }
+
   .form-mainscreen__btn {
     padding: 0 0.4375rem;
   }
