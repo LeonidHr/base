@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230317170333">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230317175319">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap&_v=20230317170333" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap&_v=20230317175319" rel="stylesheet">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -21,7 +21,7 @@
 </header> -->
 		<main class="page">
 			<section class="mainscreen">
-				<button class="mainscreen__auth button button_w" type="button">Авторизация</button>
+				<button data-popup="#popup-auth" class="mainscreen__auth button button_w" type="button">Авторизация</button>
 				<div class="mainscreen__image-ibg">
 					<picture><source data-srcset="img/mainscreen/bg.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/mainscreen/bg.jpg" alt="Фон книги"></picture>
 				</div>
@@ -73,7 +73,35 @@
 	</div>
 </footer> -->
 	</div>
-	<script src="js/app.min.js?_v=20230317170333"></script>
+	<div id="popup-auth" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close _icon-exit"></button>
+				<div class="popup__body">
+					<h2 class="popup__title title title_s22">Авторизация</h2>
+					<form class="popup__form form-popup" action="#" method="POST">
+						<div class="form-popup__inputs">
+							<div class="form-popup__item">
+								<input type="text" name="form-login" data-error="Неверный логин" placeholder="Логин" class="form-popup__input">
+							</div>
+							<div class="form-popup__item">
+								<input type="text" name="form-password" data-error="Неверный пароль" placeholder="Пароль" class="form-popup__input">
+								<button class="form-popup__btn _icon-arrow-right" type="submit"></button>
+							</div>
+						</div>
+						<div class="checkbox form-popup__checkbox">
+							<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form-remember">
+							<label for="c_1" class="checkbox__label">
+								<img src="img/icons/check.svg" alt="Запомнить меня">
+								<span class="checkbox__text">Запомнить меня</span>
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20230317175319"></script>
 </body>
 
 </html>
