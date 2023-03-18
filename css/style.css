@@ -420,6 +420,10 @@ body::after {
   transition: all 0.4s ease 0s;
 }
 
+.form-popup__checkbox {
+  margin-right: 0.625rem;
+}
+
 [class*=-ibg] {
   position: relative;
 }
@@ -1790,7 +1794,7 @@ body::after {
   }
 
   .article {
-    padding-bottom: 1.875rem;
+    padding-bottom: 4.0625rem;
   }
 
   .article__head:not(:last-child) {
@@ -2205,15 +2209,15 @@ body::after {
     }
 }
 
-@supports (padding-bottom: clamp( 1.875rem , 0.3712406015rem  +  7.5187969925vw , 5rem )) {
+@supports (padding-bottom: clamp( 4.0625rem , 3.6113721805rem  +  2.2556390977vw , 5rem )) {
     .article {
-      padding-bottom: clamp( 1.875rem , 0.3712406015rem  +  7.5187969925vw , 5rem );
+      padding-bottom: clamp( 4.0625rem , 3.6113721805rem  +  2.2556390977vw , 5rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 1.875rem , 0.3712406015rem  +  7.5187969925vw , 5rem )) {
+@supports not (padding-bottom: clamp( 4.0625rem , 3.6113721805rem  +  2.2556390977vw , 5rem )) {
     .article {
-      padding-bottom: calc(1.875rem + 3.125 * (100vw - 20rem) / 41.5625);
+      padding-bottom: calc(4.0625rem + 0.9375 * (100vw - 20rem) / 41.5625);
     }
 }
 
