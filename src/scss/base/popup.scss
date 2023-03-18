@@ -141,5 +141,11 @@ body::after {
 			}
 		}
 	}
+
+	// .form-popup__checkbox
+
+	&__checkbox {
+		margin-right: rem(10);
+	}
 }
 

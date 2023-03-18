@@ -1,6 +1,6 @@
 .article {
   @include adaptiveValue("padding-top", 50, 30);
-  @include adaptiveValue("padding-bottom", 80, 30);
+  @include adaptiveValue("padding-bottom", 80, 65);
 
   // .article__container-middle
 
